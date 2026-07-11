@@ -1,0 +1,39 @@
+.hourlyForecast {
+    grid-area: hourlyForecast;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 20px;
+    border: unset;
+    border-radius: 10px;
+    background-color: var(--neutral-800);
+    text-align: left;
+    padding: 20px 15px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hourlyForecastTitle {
+    font-size: 18px;
+    font-family: var(--dm-sans);
+    font-weight: 500;
+    margin: unset;
+    line-height: 1;
+    color: var(--neutral-0);
+}
+
+.hourlyForecastList {
+    list-style-type: none;
+    padding-left: unset;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 10px;
+    overflow-y: auto;
+    width: 100%;
+    margin: unset;
+}
+
+.hourlyForecastItem {
+    background-color: black;
+    width: 100%;
+    height: 50px;
+}

@@ -1,0 +1,21 @@
+.currentDetails {
+    grid-area: currentDetails;
+}
+
+.currentDetailsList {
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: 10px;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.currentDetailsItem {
+    border-radius: 10px;
+    background-color: var(--neutral-800);
+    color: var(--neutral-0);
+    flex: 1;
+    height: 100%;
+    padding: 15px 0;
+}

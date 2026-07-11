@@ -3,6 +3,7 @@
   max-width: 1440px;
   padding: 50px 100px 120px;
   overflow: auto;
+  margin: auto;
 }
 
 #main-content {
@@ -25,12 +26,16 @@
 .btn {
   min-width: 30px;
   height: 40px;
-  padding-inline: 10px;
+  padding-inline: 15px;
   border-radius: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--neutral-0);
   border: unset;
 }
 
 .search-btn {
   background-color: var(--blue-500);
   cursor: pointer;
+  width: 85px;
 }

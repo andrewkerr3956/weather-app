@@ -1,0 +1,23 @@
+.dailyForecast {
+    grid-area: dailyForecast;
+    text-align: left;
+    color: var(--neutral-0);
+}
+
+.dailyForecastList {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 150px;
+    column-gap: 10px;
+}
+
+.dailyForecastItem {
+    background-color: var(--neutral-800);
+    border: 2px solid var(--neutral-900);
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 15px 10px 10px;
+}
