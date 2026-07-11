@@ -1,0 +1,36 @@
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  padding: 50px 100px 120px;
+  overflow: auto;
+}
+
+#main-content {
+  margin-top: 80px;
+  text-align: center;
+}
+
+#search-section {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+#weather-section {
+  margin-top: 30px;
+}
+
+.btn {
+  min-width: 30px;
+  height: 40px;
+  padding-inline: 10px;
+  border-radius: 10px;
+  border: unset;
+}
+
+.search-btn {
+  background-color: var(--blue-500);
+  cursor: pointer;
+}

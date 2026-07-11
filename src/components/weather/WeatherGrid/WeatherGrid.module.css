@@ -1,0 +1,84 @@
+.weatherGrid {
+    display: grid;
+    width: 100%;
+    height: 750px;
+    grid-template-areas: 
+        "currentTemp currentTemp currentTemp currentTemp hourlyForecast hourlyForecast"
+        "currentTemp currentTemp currentTemp currentTemp hourlyForecast hourlyForecast"
+        "currentDetails currentDetails currentDetails currentDetails hourlyForecast hourlyForecast"
+        "dailyForecast dailyForecast dailyForecast dailyForecast hourlyForecast hourlyForecast"
+    ;
+    gap: 30px;
+}
+
+.currentTemp {
+    grid-area: currentTemp;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    background-color: blue;
+    overflow: hidden;
+}
+
+.currentTempBackground {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.currentTempBackgroundImg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.currentTempDetails {
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 30px;
+}
+
+.currentTempIdentifier {
+    text-align: left;
+}
+
+.currentTempConditions {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.currentTempDegrees {
+    font-family: var(--dm-sans);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 80px;
+}
+
+.hourlyForecast {
+    grid-area: hourlyForecast;
+    border-radius: 10px;
+    background-color: red;
+}
+
+.currentDetails {
+    grid-area: currentDetails;
+    background-color: green;
+}
+
+.dailyForecast {
+    grid-area: dailyForecast;
+    background-color: yellow;
+}
