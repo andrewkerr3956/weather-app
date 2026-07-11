@@ -6,7 +6,6 @@
     align-items: center;
     position: relative;
     border-radius: 10px;
-    background-color: blue;
     overflow: hidden;
 }
 
@@ -45,12 +44,14 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    column-gap: 30px;
 }
 
 .currentTempDegrees {
     font-family: var(--dm-sans);
     font-weight: 600;
     font-style: italic;
-    font-size: 80px;
+    font-size: 90px;
     color: var(--neutral-0);
+    letter-spacing: 0.7px;
 }

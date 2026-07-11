@@ -1,9 +1,17 @@
 import styles from './TodayConditionsDetails.module.css';
 
-const TodayConditionsDetailItem = () => {
+interface TodayConditionsDetailItemProps {
+    label: string;
+    value: string;
+}
+
+const TodayConditionsDetailItem = (props: TodayConditionsDetailItemProps) => {
+    const { label, value } = props;
+
     return (
         <div className={styles.currentDetailsItem}>
-            TEST
+            <p>{label}</p>
+            <p>{value}</p>
         </div>
     )
 }

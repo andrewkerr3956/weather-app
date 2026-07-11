@@ -1,9 +1,18 @@
+import type { ReactNode } from 'react';
 import styles from './HourlyForecast.module.css';
 
-const HourlyForecastItem = () => {
+interface HourlyForecastItemProps {
+    icon: ReactNode;
+    time: string;
+    temperature: number;
+    unit: string;
+}
+
+const HourlyForecastItem = ({ icon, time, temperature, unit }: HourlyForecastItemProps) => {
     return (
         <div className={styles.hourlyForecastItem}>
-            Test info
+            <span>{time}</span>
+            <span>{temperature}° {unit}</span>
         </div>
     )
 }

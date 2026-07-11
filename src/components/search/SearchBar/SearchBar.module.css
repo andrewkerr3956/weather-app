@@ -1,3 +1,18 @@
+.searchBarWrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.searchBarForm {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    column-gap: 10px;
+}
+
 .searchBar {
     height: 50px;
     width: 100%;
@@ -24,4 +39,21 @@
     border: unset;
     font-size: 14px;
     color: var(--neutral-0);
+}
+
+.searchBtn {
+    background-color: var(--blue-500);
+    border: unset;
+    height: 100%;
+}
+
+.searchBarResults {
+    background-color: var(--neutral-800);
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    z-index: 99999;
 }
