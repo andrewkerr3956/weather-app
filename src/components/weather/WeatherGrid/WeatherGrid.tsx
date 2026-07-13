@@ -19,14 +19,24 @@ const WeatherGrid = ({ data, loading }: WeatherGridProps) => {
                 date={new Date(data?.current?.time)}
                 weather_code={data?.current?.weather_code}
             />
-            <TodayConditionsDetails />
+            <TodayConditionsDetails 
+                data={{
+                    current: data?.current,
+                    current_units: data?.current_units
+                }}
+            />
             <DailyForecast 
                 data={{
                     daily: data?.daily,
                     daily_units: data?.daily_units
                 }}
             />
-            <HourlyForecast />
+            <HourlyForecast 
+                data={{
+                    hourly: data?.hourly,
+                    hourly_units: data?.hourly_units
+                }}
+            />
         </div>
     )
 };

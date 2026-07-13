@@ -26,15 +26,19 @@ export default function SearchBar({ onSearch, onSubmit, ...props }: SearchBarPro
     }
 
     const handleSearchSubmit = async() => {
-        let data = searchData;
-        if(!data?.latitude || !data?.longitude || !data?.name) {
-            // Get the coordinate data first before submitting the data, which requires coordinates to work correctly.
-            const geocodeData = await geocodeService.search(searchVal);
-            setSearchData(geocodeData?.results?.[0]);
-            data = geocodeData?.results?.[0];
-            console.log({ data })
-        }
-        onSubmit(data);
+        // let data = searchData;
+        // if(!data?.latitude || !data?.longitude || !data?.name) {
+        //     // Get the coordinate data first before submitting the data, which requires coordinates to work correctly.
+        //     const geocodeData = await geocodeService.search(searchVal);
+        //     setSearchData(geocodeData?.results?.[0]);
+        //     data = geocodeData?.results?.[0];
+        // }
+        const searchQuery = {
+            name: searchData?.name || searchVal,
+            latitude: searchData?.latitude,
+            longitude: searchData?.longitude
+        };
+        onSubmit(searchQuery);
     };
 
     useEffect(() => {

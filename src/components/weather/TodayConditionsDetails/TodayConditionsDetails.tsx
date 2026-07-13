@@ -16,13 +16,18 @@ const TodayConditionsDetailItem = (props: TodayConditionsDetailItemProps) => {
     )
 }
 
-const TodayConditionsDetails = () => {
+interface TodayConditionsDetailsProps {
+    data: any;
+}
+
+const TodayConditionsDetails = ({ data }: TodayConditionsDetailsProps) => {
     return (
         <div className={styles.currentDetails}>
             <div className={styles.currentDetailsList}>
-                {new Array(4).fill(null).map((i) => (
-                    <TodayConditionsDetailItem />
-                ))}
+                <TodayConditionsDetailItem label='Feels Like' value={data?.current?.apparent_temperature} />
+                <TodayConditionsDetailItem label='Humidity' value={data?.current?.relative_humidity_2m} />
+                <TodayConditionsDetailItem label='Wind' value={data?.current?.wind_speed_2m} />
+                <TodayConditionsDetailItem label='Precipitation' value={data?.current?.precipitation} />
             </div>
         </div>
     )
